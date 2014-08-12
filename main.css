@@ -1,0 +1,38 @@
+	header{
+		background-color: 0,100,0;
+		text-align: center;
+		text-decoration: none;
+		margin: 20px;
+
+	}
+	 ul {
+		text-decoration: none;
+		display: inline;
+		border-color: 0, 100, 0
+	}
+
+
+	h1, h2{
+		text-decoration: none;
+		padding: 20px;
+
+	}
+
+
+
+	footer{
+		text-align: center;
+	}
+	#searchtools li, p{
+		display: inline;
+		padding: 20px;
+		margin: 0 auto;
+
+	}
+	article {
+		background-color: orange;
+		display: inline-block;
+	}
+
+
+
