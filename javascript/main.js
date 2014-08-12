@@ -3,14 +3,24 @@
 */
 
 $(document).ready(function() {
+
+  var topicArray = [];
+
   var addTitleAndUrlToArticleList = function(article) {
     var htmlTemplate = '<li>\
-                          <a target="_blank" href="{url}">{title}</a> <br>\
+                          <a target="_blank" href="{url}">{title}</a> <br><br>\
                           {summary} \
                         </li>';
 
     var html = htmlTemplate.fill(article);
     $("#headlines").append(html);
+  };
+
+  var addToTopicList = function(topic, index) {
+    var htmlTemplate = '<option value="' + index +'" id="topic'+ index +'">{english_subcategory_name}</option>';
+
+    var html = htmlTemplate.fill(topic);
+    $("#topicList").append(html);
   };
 
   var handleFeedzillaArticles = function(response) {
@@ -41,10 +51,52 @@ $(document).ready(function() {
     $.ajax(ajaxParameters);
   };
 
+  var captureTrendingTopics = function(response){
+
+    for (var i = 0; i < 3; i++) {
+      topicArray[i] = response[i];
+    }
+
+    for (var i = 0; i < topicArray.length; i++) {
+      addToTopicList(topicArray[i], i);
+    }
+
+    searchTrendingTopicArticles();
+  };
+
+  var searchForTrendingTopics = function(){
+
+    var ajaxParameters = {
+      "url":"http://api.feedzilla.com/v1/subcategories",
+      "data": {"order": "popular", "count":15},
+      "crossDomain": true,
+      "dataType": 'json',
+      "success": captureTrendingTopics
+    };
+
+    $.ajax(ajaxParameters);
+  };
+
+  var searchTrendingTopicArticles = function(){
+
+    var url ="http://api.feedzilla.com/v1/categories/{category_id}/subcategories/{subcategory_id}/articles".fill(topicArray[0]);
+    debugger
+    var ajaxParameters = {
+      "url":url,
+      "data": {"count":15},
+      "crossDomain": true,
+      "dataType": 'json',
+      "success": handleFeedzillaArticles
+    };
+
+    $.ajax(ajaxParameters);
+  };
+
+  searchForTrendingTopics();
   $("#searchButton").click(searchForThingInSearchBox);
 
   
-  // [YOUR CODE HERE]
+  // [YOUR CODE HERE]<option value="0" id="topic0">Trending 1</option>
 
   
 });
