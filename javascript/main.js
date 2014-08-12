@@ -61,7 +61,7 @@ $(document).ready(function() {
       addToTopicList(topicArray[i], i);
     }
 
-    searchTrendingTopicArticles();
+    searchTrendingTopicArticles(0);
   };
 
   var searchForTrendingTopics = function(){
@@ -77,10 +77,14 @@ $(document).ready(function() {
     $.ajax(ajaxParameters);
   };
 
-  var searchTrendingTopicArticles = function(){
+  var getDropdown = function(){
+    
+  }
 
-    var url ="http://api.feedzilla.com/v1/categories/{category_id}/subcategories/{subcategory_id}/articles".fill(topicArray[0]);
-    debugger
+  var searchTrendingTopicArticles = function(index){
+
+    var url ="http://api.feedzilla.com/v1/categories/{category_id}/subcategories/{subcategory_id}/articles".fill(topicArray[index]);
+
     var ajaxParameters = {
       "url":url,
       "data": {"count":15},
@@ -94,6 +98,7 @@ $(document).ready(function() {
 
   searchForTrendingTopics();
   $("#searchButton").click(searchForThingInSearchBox);
+  $("#topicButton").click(searchTrendingTopicArticles($("topicList").val()));
 
   
   // [YOUR CODE HERE]<option value="0" id="topic0">Trending 1</option>
