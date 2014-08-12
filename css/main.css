@@ -1,22 +1,46 @@
 /*===========================
+ALL
+=============================*/
+
+body{
+	font-family: Lato;
+	font-weight: 300;
+}
+a, a:visited, a:hover {
+	text-decoration: none;
+	color: #00bfff;
+
+}
+
+
+
+
+/*===========================
 HEADER
 =============================*/
 
+header{
+	text-align: center;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-color: gray;
+}
+
+.menu-item {
+	display: inline-block;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
 #logo{
 	font-weight: bold;
 }
 
-#search {
-	padding-left: ;
-	padding-right: ;
-}
 
-header{
-	text-align: center;
-	text-decoration: none;
-}
- ul {
-	text-decoration: none;
+
+/* ul {
+	
 	display: inline;
 	
 }
@@ -84,3 +108,4 @@ footer{
 	font-family: Lato;
 	font-size: 15px;
 }
+*/
