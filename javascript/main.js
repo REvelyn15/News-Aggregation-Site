@@ -13,7 +13,7 @@ $(document).ready(function() {
     var htmlTemplate = '<li>\
                           <h1><a target="_blank" href="{url}">{title}</a></h1> \
                           <h2>{publish_date} from {source}</h2>\
-                          <p>{summary}<p> <br>\
+                          <p>{summary}<p>\
                         </li>';
   
 

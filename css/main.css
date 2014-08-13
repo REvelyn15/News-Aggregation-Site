@@ -57,7 +57,7 @@ main{
 	text-align: center;
 	font-family: Lato;
 	font-size: 25px;
-	color: #0000FF;
+	color: #00bfff;
 	padding-bottom: 10px;
 }
 /*===========================
@@ -74,8 +74,8 @@ HEADLINES ID
 	padding-top: 20px;
 	font-weight: bold;
 }
-#headlines h3{
-	color: #2E8AE6;
+#headlines h2{
+	color: #666699;
 }
 
 .articles li{
