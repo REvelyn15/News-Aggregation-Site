@@ -50,27 +50,48 @@ main{
 	max-width: 750px;
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 40px;
+	padding-top: 20px;
+}
+
+#headlinetitle{
+	text-align: center;
+	font-family: Lato;
+	font-size: 25px;
+	color: #0000FF;
+	padding-bottom: 10px;
 }
 /*===========================
 HEADLINES ID
 =============================*/
  #headlines{
-	padding: 30px;
+	padding: 10px;
 	border-style: solid;
 	border-width: 1px;
-	border-color: gray;
+	border-color: CCC;
 }
 #headlines h1{
 	font-size: 20px;
-	padding-top: 10px;
+	padding-top: 20px;
 	font-weight: bold;
 }
 #headlines h3{
 	color: #2E8AE6;
 }
 
+.articles li{
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: CCC;
+}
 
+#noResults{
+	text-align: center;
+	font-family: Lato:;
+}
+
+#headlines h1, #headlines h2, #headlines p{
+	padding-bottom: 10px;
+}
 /*===========================
 FOOTER
 =============================*/
@@ -78,73 +99,4 @@ footer{
 	text-align: center;
 }
 
-/* ul {
-	
-	display: inline;
-	
-}
 
-
-.menu{
-	padding-bottom: 20px;
-	padding-top: 20px;
-}
-
-li{
-	margin-left: 200px;
-	margin-right: 200px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	background-color: #00bfff;
-	color: white;
-	text-align: center;
-	font-family: Lato;
-	padding: 30px;
-}
-li a{
-	text-decoration: none;
-	color: white;
-	font-size: 20px;
-	font-family: Lato;
-}
-
-a:visited{
-	color: white;
-	text-decoration: none;
-}
-footer{
-	position: fixed;
-	bottom: 0px;
-	width: 100%;
-	text-align: center;
-	font-family: Lato;
-	font-size: 15px;
-	background-color: #00bfff;
-	color: white;
-	
-}
-
-#searchtools li, p{
-	display: inline;
-	padding-left: 20px;
-	margin: 0 auto;
-	background-color: #00bfff;
-
-
-}
-
-#searcher{
-	background-color: #00bfff;
-	color: white;
-	font-family: Lato;
-	font-size: 15px;
-}
-
-#searcher a{
-	color: white;
-	text-decoration: none;
-	text-align: center;
-	font-family: Lato;
-	font-size: 15px;
-}
-*/

@@ -8,13 +8,11 @@ $(document).ready(function() {
 
   var addTitleAndUrlToArticleList = function(article) {
     //debugger
-    article.publish_date = article.publish_date.substr(0,16); 
-    //article.formatedDate = Date.parse(date).toString();
+    article.publish_date = article.publish_date.substr(0,22);
 
     var htmlTemplate = '<li>\
                           <h1><a target="_blank" href="{url}">{title}</a></h1> \
-                          <h2>{publish_date}</h2>\
-                          <h3>{source}</h3>\
+                          <h2>{publish_date} from {source}</h2>\
                           <p>{summary}<p> <br>\
                         </li>';
   
@@ -34,10 +32,12 @@ $(document).ready(function() {
     $("#headlines").empty();
 
 
-    var articleArray = response.articles; 
+    var articleArray = response.articles;
+    if(articleArray.length==0){
+      $("#headlines").append('<li id="noResults">No articles match your search terms</li>');
+    } 
     for(var i=0; i<articleArray.length; i++) {
       var article = articleArray[i];
-      //article.Url = "http://imdb.com/title/" + movie.imdbID;
 
       addTitleAndUrlToArticleList(article);
     }
