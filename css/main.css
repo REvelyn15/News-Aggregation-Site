@@ -12,6 +12,9 @@ a, a:visited, a:hover {
 
 }
 
+.hide {
+	display: none;
+}
 
 /*===========================
 HEADER
@@ -49,6 +52,14 @@ main{
 	margin-right: auto;
 	padding-top: 40px;
 }
+
+/*===========================
+FOOTER
+=============================*/
+footer{
+	text-align: center;
+}
+
 /* ul {
 	
 	display: inline;

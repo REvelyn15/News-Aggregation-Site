@@ -7,10 +7,19 @@ $(document).ready(function() {
   var topicArray = [];
 
   var addTitleAndUrlToArticleList = function(article) {
+    debugger
+
     var htmlTemplate = '<li>\
-                          <a target="_blank" href="{url}">{title}</a> <br><br>\
-                          {summary} \
+                          <h1><a target="_blank" href="{url}">{title}</a></h1> \
+                          <h2>{source}</h2>
+                          <p>{summary}<p> <br>\
                         </li>';
+  //   var htmlTemplate = '<li>\
+  //   <h2><a href"{url}">{title}</a></h2>\
+  //   <h3>"Retrofit needed to keep U.S. hurricane hunters flying into storms (reuters)"</h3>\
+  //   <p>Tue, 12 Aug 2014"MIAMI Fla. (Reuters)</p>\  
+  //   <p>"{summary}"</p>\
+  // </li>'
 
     var html = htmlTemplate.fill(article);
     $("#headlines").append(html);
@@ -49,6 +58,8 @@ $(document).ready(function() {
     };
 
     $.ajax(ajaxParameters);
+    $("#headlines").empty();
+    $("#headlines").append("<li>Loading...</li>");
   };
 
   var captureTrendingTopics = function(response){
@@ -78,7 +89,7 @@ $(document).ready(function() {
   };
 
   var getDropdown = function(){
-    
+
   }
 
   var searchTrendingTopicArticles = function(index){
@@ -94,6 +105,8 @@ $(document).ready(function() {
     };
 
     $.ajax(ajaxParameters);
+    $("#headlines").empty();
+    $("#headlines").append("<li>Loading...</li>");
   };
 
   searchForTrendingTopics();
