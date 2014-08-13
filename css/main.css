@@ -47,11 +47,29 @@ MAIN
 =============================*/
 
 main{
-	max-width: 1000px;
+	max-width: 750px;
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 40px;
 }
+/*===========================
+HEADLINES ID
+=============================*/
+ #headlines{
+	padding: 30px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: gray;
+}
+#headlines h1{
+	font-size: 20px;
+	padding-top: 10px;
+	font-weight: bold;
+}
+#headlines h3{
+	color: #2E8AE6;
+}
+
 
 /*===========================
 FOOTER

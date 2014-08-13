@@ -7,19 +7,17 @@ $(document).ready(function() {
   var topicArray = [];
 
   var addTitleAndUrlToArticleList = function(article) {
-    debugger
+    //debugger
+    article.publish_date = article.publish_date.substr(0,16); 
+    //article.formatedDate = Date.parse(date).toString();
 
     var htmlTemplate = '<li>\
                           <h1><a target="_blank" href="{url}">{title}</a></h1> \
-                          <h2>{source}</h2>
+                          <h2>{publish_date}</h2>\
+                          <h3>{source}</h3>\
                           <p>{summary}<p> <br>\
                         </li>';
-  //   var htmlTemplate = '<li>\
-  //   <h2><a href"{url}">{title}</a></h2>\
-  //   <h3>"Retrofit needed to keep U.S. hurricane hunters flying into storms (reuters)"</h3>\
-  //   <p>Tue, 12 Aug 2014"MIAMI Fla. (Reuters)</p>\  
-  //   <p>"{summary}"</p>\
-  // </li>'
+  
 
     var html = htmlTemplate.fill(article);
     $("#headlines").append(html);
