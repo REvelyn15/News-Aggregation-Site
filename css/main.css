@@ -28,6 +28,7 @@ header{
 }
 
 .menu-item {
+	font-size: 18px;
 	display: inline-block;
 	padding-top: 40px;
 	padding-bottom: 40px;
@@ -36,10 +37,22 @@ header{
 }
 #logo{
 	font-weight: bold;
+	font-size: 22px;
 }
 
 #search {
 	float: right;
+}
+
+#searchBox{
+	font-size: 14px;
+}
+
+#searchButton{
+	font-size: 14px;
+	background-color: #00bfff;
+	color:white;
+
 }
 
 /*===========================
@@ -81,7 +94,7 @@ HEADLINES ID
 .articles li{
 	border-bottom-style: solid;
 	border-bottom-width: 1px;
-	border-bottom-color: CCC;
+	border-bottom-color: gray;
 }
 
 #noResults{

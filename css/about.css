@@ -1,7 +1,7 @@
 main{
-	max-width: 750px;
-	margin-left: 40px;
-	margin-right: 40px;
+	max-width: 800px;
+	margin-left: 150px;
+	margin-right: auto;
 	padding-top: 40px;
 	font-family: Lato;
 
@@ -24,23 +24,65 @@ header{
 	padding-right: 25px;
 	font-family: Lato;
 	color: #00bfff;
+	font-size: 18px;
+	font-weight: 300;
+}
 	a, a:visited, a:hover {
 	text-decoration: none;
+	color: #00bfff;
 	
 }
 #logo{
 	font-weight: bold;
+	font-size: 22px;
 }
 
 #search {
 	float: right;
 }
 
-#rasheed{
-	padding-bottom: 40px;
-	
+#searchBox{
+	font-size: 14px;
+}
+
+#searchButton{
+	font-size: 14px;
+	background-color: #00bfff;
+	color:white;
+}
+
+.Rasheed{
+	padding-bottom: 20px;
+	padding-top: 20px;
 
 }
-#devon{
-	float: right;
+
+.Rasheed p {
+	position: relative;
+	bottom: 200px;
+	left: 310px;
+
+}
+.Rasheed img {
+	height: 300px;
+	width: 290px;
+
+}
+
+
+.Devon{
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+.Devon p {
+	position: relative;
+	bottom: 200px;
+	left: 310px;
+
+}
+
+	
+footer{
+	text-align: center;
 }
